@@ -46,7 +46,7 @@
 
 .nav a {
   text-decoration: none;
-  color: var(--muted);
+  color: rgba(255, 255, 255, 0.68);
   padding: 8px 12px;
   border-radius: 12px;
   border: 1px solid transparent;
@@ -67,7 +67,7 @@
 }
 
 .chip {
-  color: var(--muted);
+  color: rgba(255, 255, 255, 0.68);
   font-size: 13px;
   padding: 6px 10px;
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -91,7 +91,7 @@
 
 .footer-inner {
   padding: 18px 0;
-  color: var(--muted);
+  color: rgba(255, 255, 255, 0.68);
   font-size: 13px;
   display: flex;
   justify-content: center;
@@ -101,10 +101,11 @@
   margin: 0;
   font-size: 32px;
   line-height: 1.1;
+  color: black;
 }
 
 .muted {
-  color: var(--muted);
+  color: black;
 }
 
 .page-head {
@@ -121,6 +122,7 @@
 .stack {
   display: flex;
   flex-direction: column;
+  color: black;
 }
 
 .gap-4 {
@@ -188,6 +190,7 @@
 
 .card-title {
   font-weight: 700;
+  color: black;
 }
 
 .badge {
@@ -195,14 +198,14 @@
   padding: 6px 10px;
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.14);
-  color: var(--muted);
+  color: black;
   background: rgba(255, 255, 255, 0.06);
 }
 
 .btn {
   border: 1px solid rgba(96, 165, 250, 0.35);
   background: rgba(73, 132, 249, 0.88);
-  color: var(--text);
+  color: smokewhite;
   padding: 12px 16px;
   border-radius: 14px;
   cursor: pointer;
@@ -220,13 +223,16 @@
 }
 
 .btn:disabled {
-  opacity: 0.6;
+  opacity: 0.8;
   cursor: not-allowed;
+  color: black;
 }
 
 .btn-secondary {
-  background: rgba(255, 255, 255, 0.07);
+  padding: 12px 16px;
+  background: rgba(73, 132, 249, 0.88);
   border-color: rgba(255, 255, 255, 0.16);
+  color: black;
 }
 
 .btn-danger {
@@ -258,7 +264,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  color: var(--muted);
+  color: black;
   font-size: 13px;
 }
 
@@ -309,7 +315,7 @@
 }
 
 .table-head {
-  color: var(--muted);
+  color: rgba(255, 255, 255, 0.68);
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.08em;

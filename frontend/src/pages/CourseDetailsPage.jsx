@@ -127,7 +127,7 @@ export function CourseDetailsPage() {
           <h1 className="h1">{course.title}</h1>
           <p className="muted">Instructor: {course.instructor}</p>
         </div>
-        <Link className="btn btn-secondary" to="/">
+        <Link className="btn" to="/">
           Back
         </Link>
       </div>

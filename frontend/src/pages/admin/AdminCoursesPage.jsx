@@ -50,8 +50,10 @@ export function AdminCoursesPage() {
       setBusy(true)
       setError('')
       setNotice('')
-      if (editingId) await api.put(`/courses/${editingId}`, form)
-      else await api.post('/courses', form)
+      const payload = { ...form }
+      if (!payload.link) delete payload.link
+      if (editingId) await api.put(`/courses/${editingId}`, payload)
+      else await api.post('/courses/', payload)
       await load()
       setNotice(editingId ? 'Course updated.' : 'Course created.')
       reset()

@@ -18,7 +18,7 @@ router.post('/', authenticateToken, requireAdmin, [
     body('modules').isInt({ min: 1 }).withMessage('Modules must be at least 1'),
     body('durationHours').isInt({ min: 1 }).withMessage('Duration must be at least 1 hour'),
     body('instructor').trim().isLength({ min: 3 }).withMessage('Instructor name must be at least 3 characters'),
-    body('link').optional().isURL().withMessage('Link must be a valid URL')
+    body('link').optional()
 ], CourseController.createCourse);
 
 // Update course (Admin only)
