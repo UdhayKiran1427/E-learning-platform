@@ -45,7 +45,7 @@ export function MyEnrollmentsPage() {
                 <span className="badge">Progress: {e.progress_percentage ?? 0}%</span>
               </div>
               {e.course_id ? (
-                <Link className="btn btn-secondary" to={`/courses/${e.course_id}`}>
+                <Link className="btn btn-secondary" to={`/courses/${e.course_id}/view`}>
                   View course
                 </Link>
               ) : (

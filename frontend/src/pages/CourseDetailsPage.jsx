@@ -185,11 +185,14 @@ export function CourseDetailsPage() {
                 <button className="btn" onClick={startPayment} disabled={!canPay || busy} type="button">
                   {status?.hasPaid ? 'Already paid' : busy ? 'Starting…' : 'Pay & Enroll'}
                 </button>
+
+                {status?.hasPaid ? (
+                  <Link className="btn btn-primary" to={`/courses/${id}/view`} style={{ marginLeft: 12 }}>
+                    View course
+                  </Link>
+                ) : null}
               </div>
 
-              <div className="muted">
-                Note: your backend currently expects the payment <em>amount</em> to be provided by the client.
-              </div>
             </>
           )}
         </div>

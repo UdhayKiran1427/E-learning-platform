@@ -22,10 +22,11 @@ export function Layout() {
            ): null} 
             {isAuthed && user?.role === 'student' ? (
               <>
-              <NavLink to="/me/enrollments">My Enrollments</NavLink>
               <NavLink to="/" end>
               Courses
             </NavLink>
+              <NavLink to="/me/enrollments">My Enrollments</NavLink>
+              <NavLink to="/me/profile">Profile</NavLink>
             </>
             ) : null}
             {isAuthed && user?.role === 'admin' ? (
@@ -35,6 +36,7 @@ export function Layout() {
                 <NavLink to="/admin/students">Students</NavLink>
                 <NavLink to="/admin/enrollments">Enrollments</NavLink>
                 <NavLink to="/admin/admins">Create Admin</NavLink>
+                <NavLink to="/me/profile">Profile</NavLink>
               </>
             ) : null}
           </nav>
