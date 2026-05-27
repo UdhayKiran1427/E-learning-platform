@@ -41,12 +41,7 @@ export function CoursesPage() {
           <h1 className="h1">Courses</h1>
           <p className="muted">Browse available courses and enroll after payment.</p>
         </div>
-        <input
-          className="input"
-          value={q}
-          onChange={(e) => setQ(e.target.value)}
-          placeholder="Search by title or instructor…"
-        />
+        
       </div>
 
       {loading ? <div className="card">Loading…</div> : null}

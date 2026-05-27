@@ -36,6 +36,12 @@ router.put('/users/:id/activate', authenticateToken, requireAdmin, (req, res) =>
     UserController.updateStudentStatus(req, res);
 });
 
+// Update user profile (authenticated user)
+router.put('/profile', authenticateToken, UserController.updateProfile);
+
+// Get my enrollments (authenticated student)
+router.get('/my/enrollments', authenticateToken, UserController.getMyEnrollments);
+
 // Get user by ID (Admin only)
 router.get('/:id', authenticateToken, requireAdmin, UserController.getUserById);
 
@@ -45,13 +51,7 @@ router.put('/:id', authenticateToken, requireAdmin, UserController.updateUser);
 // Delete user (Admin only)
 router.delete('/:id', authenticateToken, requireAdmin, UserController.deleteUser);
 
-// Update user profile (authenticated user)
-router.put('/profile', authenticateToken, UserController.updateProfile);
-
 // Get student enrollments (Admin only)
 router.get('/:studentId/enrollments', authenticateToken, requireAdmin, UserController.getStudentEnrollments);
-
-// Get my enrollments (authenticated student)
-router.get('/my/enrollments', authenticateToken, UserController.getMyEnrollments);
 
 module.exports = router;

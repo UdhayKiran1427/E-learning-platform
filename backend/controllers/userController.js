@@ -282,8 +282,15 @@ class UserController {
             const userId = req.user.userId;
             const { fullName, email, currentPassword, newPassword } = req.body;
 
+            if (!currentPassword) {
+                return res.status(400).json({
+                    success: false,
+                    message: 'Current password is required to update profile'
+                });
+            }
+
             // Check if user exists
-            const user = await User.findById(userId);
+            const user = await User.findByIdWithPassword(userId);
             if (!user) {
                 return res.status(404).json({
                     success: false,

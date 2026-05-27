@@ -17,6 +17,14 @@ class User {
         return users[0] || null;
     }
 
+    static async findByIdWithPassword(id) {
+        const [users] = await pool.query(
+            'SELECT id, full_name, email, password, role, registration_date, status FROM users WHERE id = ?',
+            [id]
+        );
+        return users[0] || null;
+    }
+
     static async findByEmailAndRole(email, role) {
         const [users] = await pool.query(
             'SELECT id, full_name, email, password, role FROM users WHERE email = ? AND role = ?',
