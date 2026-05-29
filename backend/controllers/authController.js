@@ -89,6 +89,12 @@ class AuthController {
                     message: 'Invalid email or password'
                 });
             }
+            if (user.status && user.status !== 'active') {
+                return res.status(401).json({
+                    success: false,
+                    message: 'Your account is not active. Please contact support.'
+                });
+            }
 
             // Compare password
             const isPasswordValid = await bcrypt.compare(password, user.password);

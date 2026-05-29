@@ -10,7 +10,7 @@ export function Layout() {
       <header className="topbar">
         <div className="container topbar-inner">
           <Link to="/" className="brand">
-            Online Tutorial
+            Gradious Tutorial
           </Link>
 
           <nav className="nav">

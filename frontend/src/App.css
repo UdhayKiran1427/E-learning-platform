@@ -270,10 +270,11 @@
 
 .alert {
   padding: 14px 16px;
+  margin: 12px 0;
   border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.12);
   background: rgba(255, 255, 255, 0.05);
-  color: var(--text);
+  color: black;
 }
 
 .alert.error,
@@ -315,7 +316,7 @@
 }
 
 .table-head {
-  color: rgba(255, 255, 255, 0.68);
+  color: black;
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.08em;

@@ -42,11 +42,10 @@ export function AdminEnrollmentsPage() {
       <div className="card">
         <div className="table">
           <div className="table-head">
-            <div>ID</div>
-            <div>Student</div>
-            <div>Course</div>
-            <div>Status</div>
-            <div>Actions</div>
+            <div className='stack'><b>ID</b></div>
+            <div className='stack'><b>Student</b></div>
+            <div className='stack'><b>Course</b></div>
+            <div className='stack'><b>Status</b></div>
           </div>
           {items.map((e) => (
             <div className="table-row" key={e.id}>
@@ -59,14 +58,14 @@ export function AdminEnrollmentsPage() {
               </div>
               <div>
                 <div className="stack gap-4">
-                  <strong>{e.course_title}</strong>
+                  <strong >{e.course_title}</strong>
                   <span className="muted">{e.instructor}</span>
                 </div>
               </div>
               <div>
-                <span className="badge">{e.status}</span>
+                <span className="stack"><strong>{e.status}</strong></span>
               </div>
-              <div className="row">
+              {/* <div className="row">
                 <button
                   className="btn"
                   type="button"
@@ -91,7 +90,7 @@ export function AdminEnrollmentsPage() {
                 >
                   Reject
                 </button>
-              </div>
+              </div> */}
             </div>
           ))}
         </div>
