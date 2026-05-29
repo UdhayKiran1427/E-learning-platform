@@ -9,7 +9,7 @@ export function Layout() {
     <div className="app-shell">
       <header className="topbar">
         <div className="container topbar-inner">
-          <Link to="/" className="brand">
+          <Link to={isAuthed && user?.role === 'admin' ? '/admin' : '/'} className="brand">
             Gradious Tutorial
           </Link>
 
@@ -60,7 +60,7 @@ export function Layout() {
               </>
             ) : (
               <>
-                <NavLink className="btn btn-secondary" to="/login">
+                <NavLink className="btn " to="/login">
                   Login
                 </NavLink>
                 <NavLink className="btn" to="/register">

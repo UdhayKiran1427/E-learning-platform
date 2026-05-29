@@ -68,7 +68,7 @@ export function ProfilePage() {
           <h1 className="h1">Profile</h1>
           <p className="muted">View and update your profile information.</p>
         </div>
-        <Link className="btn btn-secondary" to="/">
+        <Link className="btn btn-secondary" to={user && user.role === 'admin' ? '/admin' : '/'}>
           Back
         </Link>
       </div>

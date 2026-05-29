@@ -53,7 +53,7 @@ export function LoginPage() {
           </button>
         </form>
 
-        <div className="muted">
+        <div className="muted" style={{marginTop:"8px"}}>
           New here? <Link to="/register">Create an account</Link>
         </div>
       </div>

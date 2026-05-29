@@ -41,14 +41,14 @@ export function AdminEnrollmentsPage() {
 
       <div className="card">
         <div className="table">
-          <div className="table-head">
+          <div className="table-heads">
             <div className='stack'><b>ID</b></div>
             <div className='stack'><b>Student</b></div>
             <div className='stack'><b>Course</b></div>
             <div className='stack'><b>Status</b></div>
           </div>
           {items.map((e) => (
-            <div className="table-row" key={e.id}>
+            <div className="table-rows" key={e.id}>
               <div>#{e.id}</div>
               <div>
                 <div className="stack gap-4">
