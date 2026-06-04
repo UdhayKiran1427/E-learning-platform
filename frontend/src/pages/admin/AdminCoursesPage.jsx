@@ -173,7 +173,7 @@ export function AdminCoursesPage() {
         <div className="card">
           <div className="card-title">Active courses</div>
           <div className="stack gap-12">
-            {courses.map((c) => (
+            {courses?.map((c) => (
               <div key={c.id} className="item">
                 <div className="stack gap-4">
                   <div className="row space">

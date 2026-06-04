@@ -14,6 +14,7 @@ export function CoursesPage() {
         setLoading(true)
         setError('')
         const res = await api.get('/courses')
+        console.log('Courses response:', res)
         setCourses(unwrap(res) || [])
       } catch (e) {
         setError(e?.response?.data?.message || e.message || 'Failed to load courses')
@@ -48,7 +49,7 @@ export function CoursesPage() {
       {error ? <div className="card error">{error}</div> : null}
 
       <div className="grid">
-        {filtered.map((c) => (
+        {filtered?.map((c) => (
           <div key={c.id} className="card">
             <div className="stack gap-8">
               <div className="card-title">{c.title}</div>

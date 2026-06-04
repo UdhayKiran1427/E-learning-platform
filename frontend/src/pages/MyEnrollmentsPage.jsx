@@ -36,7 +36,7 @@ export function MyEnrollmentsPage() {
       {error ? <div className="card error">{error}</div> : null}
 
       <div className="grid">
-        {items.map((e) => (
+        {items?.map((e) => (
           <div className="card" key={e.id}>
             <div className="stack gap-8">
               <div className="card-title">{e.course_title || e.title || 'Course'}</div>

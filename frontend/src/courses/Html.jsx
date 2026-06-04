@@ -315,7 +315,7 @@ export default function HtmlCourseTutorialPage() {
             { label: "Students", value: "12K+" },
             { label: "Projects", value: "8" },
             { label: "Rating", value: "4.9" },
-          ].map((item, index) => (
+          ]?.map((item, index) => (
             <div
               key={index}
               className="stat-card"
@@ -343,7 +343,7 @@ export default function HtmlCourseTutorialPage() {
           </div>
 
           <div className="lesson-list">
-            {lessons.map((lesson, index) => (
+            {lessons?.map((lesson, index) => (
               <div
                 key={index}
                 className="lesson-card"

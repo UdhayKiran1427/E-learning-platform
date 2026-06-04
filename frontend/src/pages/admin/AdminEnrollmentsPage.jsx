@@ -47,7 +47,7 @@ export function AdminEnrollmentsPage() {
             <div className='stack'><b>Course</b></div>
             <div className='stack'><b>Status</b></div>
           </div>
-          {items.map((e) => (
+          {items?.map((e) => (
             <div className="table-rows" key={e.id}>
               <div>#{e.id}</div>
               <div>

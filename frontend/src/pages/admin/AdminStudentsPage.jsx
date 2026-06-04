@@ -49,7 +49,7 @@ export function AdminStudentsPage() {
             <div>Status</div>
             <div>Actions</div>
           </div>
-          {students.map((s) => (
+          {students?.map((s) => (
             <div className="table-row" key={s.id}>
               <div>#{s.id}</div>
               <div>{s.full_name || s.fullName}</div>
