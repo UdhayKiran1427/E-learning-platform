@@ -3,7 +3,7 @@ const { pool } = require('../config/database');
 class Course {
     static async findAll() {
         const [courses] = await pool.query(
-            'SELECT * FROM courses WHERE status = "active" ORDER BY title'
+            'SELECT * FROM courses ORDER BY title'
         );
         return courses;
     }
