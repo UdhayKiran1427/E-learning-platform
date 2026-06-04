@@ -13,7 +13,7 @@ export function CoursesPage() {
       try {
         setLoading(true)
         setError('')
-        const res = await api.get('/courses')
+        const res = await api.get('/api/courses')
         console.log('Courses response:', res)
         setCourses(unwrap(res) || [])
       } catch (e) {
@@ -24,7 +24,7 @@ export function CoursesPage() {
     }
     load()
   }, [])
-
+  console.log('Courses state:', courses)
   const filtered = useMemo(() => {
     const term = q.trim().toLowerCase()
     if (!term) return courses
