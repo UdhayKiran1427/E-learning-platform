@@ -10,7 +10,7 @@ class Course {
 
     static async findById(id) {
         const [courses] = await pool.query(
-            'SELECT * FROM courses WHERE id = ? AND status = "active"',
+            'SELECT * FROM courses WHERE id = ?',
             [id]
         );
         return courses[0] || null;
@@ -62,7 +62,6 @@ class Course {
                 COUNT(e.id) as enrollment_count
             FROM courses c
             LEFT JOIN enrollments e ON c.id = e.course_id
-            WHERE c.status = 'active'
             GROUP BY c.id
             ORDER BY c.title
         `);
