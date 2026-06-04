@@ -13,7 +13,7 @@ export function CoursesPage() {
       try {
         setLoading(true)
         setError('')
-        const res = await api.get('/api/courses')
+        const res = await api.get('/courses')
         console.log('Courses response:', res)
         setCourses(unwrap(res) || [])
       } catch (e) {
