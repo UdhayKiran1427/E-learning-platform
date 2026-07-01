@@ -110,10 +110,10 @@ class User {
     }
 
     static async getDashboardStats() {
-        const [studentCount] = await pool.query('SELECT COUNT(*) as count FROM users WHERE role = "student"');
-        const [courseCount] = await pool.query('SELECT COUNT(*) as count FROM courses WHERE status = "active"');
-        const [pendingCount] = await pool.query('SELECT COUNT(*) as count FROM enrollments WHERE status = "pending"');
-        const [approvedCount] = await pool.query('SELECT COUNT(*) as count FROM enrollments WHERE status = "approved"');
+        const [studentCount] = await pool.query('SELECT COUNT(*) as count FROM users WHERE role = ?', ['student']);
+        const [courseCount] = await pool.query('SELECT COUNT(*) as count FROM courses WHERE status = ?', ['active']);
+        const [pendingCount] = await pool.query('SELECT COUNT(*) as count FROM enrollments WHERE status = ?', ['pending']);
+        const [approvedCount] = await pool.query('SELECT COUNT(*) as count FROM enrollments WHERE status = ?', ['approved']);
 
         return {
             totalStudents: studentCount[0].count,

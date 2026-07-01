@@ -36,8 +36,8 @@ class Course {
 
     static async softDelete(id) {
         const [result] = await pool.query(
-            'UPDATE courses SET status = "inactive" WHERE id = ?',
-            [id]
+            'UPDATE courses SET status = ? WHERE id = ?',
+            ['inactive', id]
         );
         return result.affectedRows > 0;
     }
